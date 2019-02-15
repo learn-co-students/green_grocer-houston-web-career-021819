@@ -282,7 +282,7 @@ describe "Grocer" do
         coupons = [find_coupon("BEER")]
         expect(checkout(cart, coupons)).to eq(33.00)
       end
-
+     
       it "only applies coupons that meet minimum amount" do
         beer = find_item('BEER')
         cart = Array.new(3, beer)
@@ -291,7 +291,7 @@ describe "Grocer" do
         expect(checkout(cart, coupons)).to eq(33.00)
       end
     end
-
+     
     describe "clearance:" do
 
       it "applies a 20% discount to items on clearance" do
