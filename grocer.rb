@@ -55,8 +55,8 @@ def checkout(cart, coupons)
   total = 0.00
   clearanced_cart.each do |item, info|
     info.each do |key, value|
-      if key == :price
-        total += value
+      if key == :price && clearanced_cart[item][:count] != 0
+        total += (value * clearanced_cart[item][:count])
       end
     end
   end
