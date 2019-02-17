@@ -1,4 +1,4 @@
-describe "Grocer" do
+ describe "Grocer" do
   let(:items) do
     [
       {"AVOCADO" => {:price => 3.00, :clearance => true}},
@@ -47,7 +47,7 @@ describe "Grocer" do
     end
   end
 
-  describe "#apply_coupons" do
+   describe "#apply_coupons" do
     context "base case - with perfect coupon (number of items identical):" do
       before(:each) do
         @avocado = find_item('AVOCADO')
@@ -78,9 +78,9 @@ describe "Grocer" do
         expect(@avocado_result["AVOCADO W/COUPON"][:clearance]).to eq(true)
       end
 
-    end
+     end
 
-    context "more advanced cases:" do
+     context "more advanced cases:" do
 
       it "accounts for when there are more items than the coupon allows" do
         cheese = find_item('CHEESE')
